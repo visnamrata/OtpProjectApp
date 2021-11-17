@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Validate Otp</title>
+<link th:href="@{/style.css}" rel="stylesheet" />
+</head>
+<body>
+ <div class="formContainer">
+            <h2 class="formHeader">Validating email By Otp</h2>
+            <div class="formContentContainer">
+                <form action="getOtp" th:action="@{/getOtp}" method=post>
+                  
+                    <input type="text" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="formInput" placeholder="Email" required/>
+                 
+                    <input type="submit" class="submitButton" name="submitButton" value="ReSend Otp">
+                </form>
+             </div>
+        </div>
+       <div>
+            <p align="center">Oops! Otp expired resend it.
+            </p>
+    </div>
+</body>
+</html>

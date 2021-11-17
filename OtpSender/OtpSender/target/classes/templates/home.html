@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<link th:href="@{/style.css}" rel="stylesheet" />
+    <meta charset="UTF-8"/>
+    <title>Spring Boot Thymeleaf - Bootstrap WebJars</title>
+</head>
+<body>
+
+<div class="formContainer">
+        
+            <h2 class="formHeader">Validating email By Otp</h2>
+            <div class="formContentContainer">
+                <form action="getOtp" th:action="@{/getOtp}" method="post">
+                  
+           
+                    <input type="text" id="email" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" class="formInput" placeholder="Email" required/>
+                 
+                    <input type="submit" class="submitButton" name="submitButton" value="Send Otp">
+                </form>
+          
+        </div>
+       
+    </div>
+
+</body>
+</html>
